@@ -9,6 +9,7 @@ int main(int argc, const char* argv[]) {
     l = inserir(l, 7);
     l = inserir(l, 11);
     l = inserir(l, 24);
+    imprimir(l);
 
     liberar(l);
     l = NULL;
