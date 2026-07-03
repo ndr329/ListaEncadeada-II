@@ -40,4 +40,11 @@ void liberar(Lista* l);
 // Pós-condição: os elementos da lista são exibidos no console
 void imprimir(Lista* l);
 
+// Remove um nó na lista
+// Entrada: lista e o elemento a ser removido
+// Retorno: lista atualizada
+// Pré-condição: nenhuma
+// Pós-condição: a lista é alterada
+Lista* remover(Lista* l, TipoItem x);
+
 #endif /* listaEncadeada_h */
