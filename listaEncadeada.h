@@ -19,11 +19,11 @@ typedef struct no Lista;    // define a estrutura nó como Lista
 // Pós-condição: nenhuma
 int vazia(Lista* l);
 
-// Insere um nó na lista
+// Insere um elemento na cauda da lista
 // Entrada: lista e o elemento a ser inserido
 // Retorno: lista atualizada
 // Pré-condição: nenhuma
-// Pós-condição: a lista é alterada
+// Pós-condição: um novo elemento é adicionado na cauda da lista
 Lista* inserir(Lista* l, TipoItem info);
 
 // Libera todos os nós da lista
@@ -40,11 +40,18 @@ void liberar(Lista* l);
 // Pós-condição: os elementos da lista são exibidos no console
 void imprimir(Lista* l);
 
-// Remove um nó na lista
+// Remove um elemeto da lista
 // Entrada: lista e o elemento a ser removido
 // Retorno: lista atualizada
 // Pré-condição: nenhuma
-// Pós-condição: a lista é alterada
+// Pós-condição: o elemento é removido da lista
 Lista* remover(Lista* l, TipoItem x);
+
+// Faz a soma dos elementos da lista
+// Entrada: lista
+// Retorno: o valor da soma dos elementos da lista
+// Pré-condição: nenhuma
+// Pós-condição: nenhuma
+int soma(Lista* l);
 
 #endif /* listaEncadeada_h */

@@ -11,12 +11,14 @@ void menu(void) {
     Lista* l = NULL;
     TipoItem  x = 0;
     int op = -1;
+    int resultado = 0;
 
     while (op != 0) {
         printf("\nEscolha uma das opções:\n\n");
         printf("1. Inserir um elemento na lista\n");
         printf("2. Exibir a lista\n");
         printf("3. Remover um elemento da lista\n");
+        printf("4. Exibir a soma dos elementos da lista\n");
         printf("0. Encerrar o programa\n");
         printf("\nOpção: ");
         scanf("%d", &op);
@@ -39,6 +41,11 @@ void menu(void) {
                 l = remover(l, x);
                 break;
 
+            case 4:
+                resultado = soma(l);
+                printf("A soma dos elementos da lista é: %d", resultado);
+                break;
+                
             case 0:
                 printf("Saindo do programa...\n");
                 break;

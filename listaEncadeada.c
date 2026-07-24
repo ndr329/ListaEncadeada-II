@@ -11,11 +11,11 @@ int vazia(Lista* l) {
     return (l == NULL);
 }
 
-// Insere um nó na lista
+// Insere um elemento na cauda da lista
 // Entrada: lista e o elemento a ser inserido
 // Retorno: lista atualizada
 // Pré-condição: nenhuma
-// Pós-condição: a lista é alterada
+// Pós-condição: um novo elemento é adicionado na cauda da lista
 Lista* inserir(Lista* l, TipoItem info) {
     Lista* aux = malloc(sizeof(Lista));
 
@@ -76,11 +76,11 @@ void imprimir(Lista* l) {
     }
 }
 
-// Remove um nó na lista
+// Remove um elemeto da lista
 // Entrada: lista e o elemento a ser removido
 // Retorno: lista atualizada
 // Pré-condição: nenhuma
-// Pós-condição: a lista é alterada
+// Pós-condição: o elemento é removido da lista
 Lista* remover(Lista* l, TipoItem x) {
     if(vazia(l))    // verifica se a lista é vazia
         printf("Lista vazia.\n");
@@ -106,4 +106,20 @@ Lista* remover(Lista* l, TipoItem x) {
             printf("Elemento não encontrado.\n");
     }
     return l;
+}
+
+// Faz a soma dos elementos da lista
+// Entrada: lista
+// Retorno: o valor da soma dos elementos da lista
+// Pré-condição: nenhuma
+// Pós-condição: nenhuma
+int soma(Lista* l) {
+    int res = 0;
+    
+    while(l != NULL) {
+        res += l->info;
+        l = l->prox;
+    } 
+
+    return res;
 }
